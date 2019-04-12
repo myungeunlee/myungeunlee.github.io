@@ -9,6 +9,7 @@ author: myxxxxme
 https://www.acmicpc.net/problem/11559
 
 ### [1] Answer Code (19. 04. 09)
+```java
 import java.awt.Point;
 import java.io.BufferedReader;
 import java.io.IOException;
