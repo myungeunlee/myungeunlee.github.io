@@ -19,7 +19,9 @@ import java.util.Queue;
 
 public class Main {
 	static char[][] map = new char[12][6];
-	static int[][] dir = {{0,1},{1,0},{0,-1},{-1,0}};
+	static int[][] dir = {
+  {0,1},{1,0},{0,-1},{-1,0}
+  };
 	static int ans;
 	static boolean flag;
 
