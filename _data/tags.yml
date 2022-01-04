@@ -10,3 +10,11 @@ cloud :
   name: cloud
   description: False
   cover: assets/built/images/background-frontend.jpg
+algorithm :
+  name: algorithm
+  description: False
+  cover: assets/built/images/background-frontend.jpg
+etc :
+  name: etc
+  description: False
+  cover: assets/built/images/background-frontend.jpg
