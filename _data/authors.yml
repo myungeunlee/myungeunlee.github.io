@@ -1,0 +1,11 @@
+myungeunlee :
+  username: myungeunlee    # user name : martin
+  name: myungeunlee        # user full name : Martin Luther King
+  url_full:             # Homepage url
+  url:
+  bio: #<a href="https://www.youtube.com/channel/UCp-MztINXTRVkRGCnqnYNlQ">얼큰우동TV, 쉽게배우는 IT(Programming,Machine Learning,금융)</a>
+  # 회사정보
+  picture: assets/built/images/author-logo.jpg   # author image
+  facebook:             # facebook ID
+  twitter:              # twitter ID
+  cover: False

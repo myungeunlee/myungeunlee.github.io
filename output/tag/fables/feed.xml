@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/fables/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2021-12-27T20:03:43+09:00</updated>
+  <id>http://localhost:4000/tag/fables/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">myungeun’s blog | </title>
+  
+
+  
+    <subtitle>myungeun's 블로그</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">The Businessman &amp;amp; The Fisherman</title>
+      <link href="http://localhost:4000/the-businessman-and-fisherman" rel="alternate" type="text/html" title="The Businessman &amp; The Fisherman" />
+      <published>2014-08-12T19:18:00+09:00</published>
+      <updated>2014-08-12T19:18:00+09:00</updated>
+      <id>http://localhost:4000/the-businessman-and-fisherman</id>
+      <content/>
+      
+    </entry>
+  
+</feed>

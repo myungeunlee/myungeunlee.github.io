@@ -1,0 +1,12 @@
+javascript :
+  name: javascript
+  description: False
+  cover: assets/built/images/background-frontend.jpg
+spring :
+  name: spring
+  description: False
+  cover: assets/built/images/background-frontend.jpg
+cloud :
+  name: cloud
+  description: False
+  cover: assets/built/images/background-frontend.jpg
