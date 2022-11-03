@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/fiction/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2021-12-27T20:03:43+09:00</updated>
+  <id>http://localhost:4000/tag/fiction/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">myungeun’s blog | </title>
+  
+
+  
+    <subtitle>myungeun's 블로그</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Out to Sea</title>
+      <link href="http://localhost:4000/out-to-sea" rel="alternate" type="text/html" title="Out to Sea" />
+      <published>1912-07-24T19:18:00+09:00</published>
+      <updated>1912-07-24T19:18:00+09:00</updated>
+      <id>http://localhost:4000/out-to-sea</id>
+      <content/>
+
+      <author>
+          <name>edgar</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="fiction" />
+      
+
+      
+        <summary type="html">I had this story from one who had no business to tell it to me, or to any other. I may credit the seductive influence of an old vintage upon the narrator for the beginning of it, and my own skeptical incredulity during the days that followed for the balance of the strange tale.</summary>
+      
+
+      
+      
+    </entry>
+
+  
+</feed>

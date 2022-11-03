@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="https://myungeunlee.github.io/tag/javascript/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://myungeunlee.github.io/" rel="alternate" type="text/html"/>
+  <updated>2022-11-03T08:26:53+00:00</updated>
+  <id>https://myungeunlee.github.io/tag/javascript/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">myungeun’s blog | </title>
+  
+
+  
+    <subtitle>명이나물 개발 블로그</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+  <entry></entry>
+      <title type="html">Reduce 사용법 및 예제</title>
+      <link href="https://myungeunlee.github.io/reduce" rel="alternate" type="text/html" title="Reduce 사용법 및 예제" />
+      <published>2019-03-27T00:00:00+00:00</published>
+      <updated>2019-03-27T00:00:00+00:00</updated>
+      <id>https://myungeunlee.github.io/reduce</id>
+      <content type="html">&lt;h4 id=&quot;글-쓰며-참고한-문서&quot;&gt;[글 쓰며 참고한 문서]&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;[]&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>myungeunlee</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="javascript" />
+      
+
+      
+        <summary type="html">[글 쓰며 참고한 문서] []</summary>
+      
+
+      
+      
+    </feed>
+  
+  <entry></entry>
+      <title type="html">[React] Webpack(웹팩) 이란?</title>
+      <link href="https://myungeunlee.github.io/webpack" rel="alternate" type="text/html" title="[React] Webpack(웹팩) 이란?" />
+      <published>2019-03-02T00:00:00+00:00</published>
+      <updated>2019-03-02T00:00:00+00:00</updated>
+      <id>https://myungeunlee.github.io/webpack</id>
+      <content type="html">&lt;h1 id=&quot;웹팩webpack-이린&quot;&gt;웹팩(webpack) 이린?&lt;/h1&gt;
+&lt;p&gt;웹팩은 프로젝트의 구조를 분석하고 자바스크립트 모듈을 비롯한 관련 리소스들을 찾은 다음 이를 브라우저에서 이용할 수 있는 번들로 묶고 패킹하는 모듈 번들러(Module bundler) 이다.
+최근 자바스크립트를 브라우저가 이해할 수 있도록 변경해주는 역할.&lt;/p&gt;
+
+&lt;h3 id=&quot;웹팩의-주요-4가지-개념&quot;&gt;웹팩의 주요 4가지 개념&lt;/h3&gt;
+&lt;h4 id=&quot;엔트리entry&quot;&gt;엔트리(Entry)&lt;/h4&gt;
+&lt;p&gt;javascript, css, images 등 모든 것을 자바스크립트 모듈로 로딩해서 사용하도록 함.
+자바스크립트가 로딩하는 모듈이 많아질수록 모듈간의 의존성은 증가.
+의존성 그래프의 시작점을 웹팩에서는 엔트리(entry)라고 함.
+웹팩은 엔트리를 통해서 필요한 모듈을 로딩한고 하나의 파일로 묶는다.&lt;/p&gt;
+
+&lt;h4 id=&quot;로더loader&quot;&gt;로더(loader)&lt;/h4&gt;
+&lt;p&gt;웹팩은 자바스크립트 밖에 모른다.
+따라서 비 자바스크립트 파일을 웹팩이 이해하게끔 변경하는 역할이 로더이다.
+로더를 이용하면 외부 스크립트와 도구를 통해 소스 파일을 전처리하고 다양한 변경과 변환을 적용할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;또한 로더는 리액트의 JSX를 일반 자바스크립트로 변환하는 데도 이용할 수 있다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;로더의 예
+&lt;strong&gt;babel-loader&lt;/strong&gt; 바벨은 자바스크립트 컴파일 도구 지원을 위한 플랫폼으로 ES6를 ES5으로 변환 시켜준다.
+&lt;strong&gt;style-loader&lt;/strong&gt; 는 자바스크립트로 변경된 스타일시트를 동적으로 돔에 추가하는 로더이다.
+보통 CSS를 번들링하기 위해서는 &lt;strong&gt;css-loader, style-loader&lt;/strong&gt; 를 함께 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;플러그인plugin&quot;&gt;플러그인(plugin)&lt;/h4&gt;
+&lt;p&gt;번들된 결과물을 처리함.
+번들된 자바스크립트를 읽거나 특정 텍스트를 추출하는 용도로 사용함.&lt;/p&gt;
+
+&lt;h3 id=&quot;웹팩-기능-로직&quot;&gt;웹팩 기능 로직&lt;/h3&gt;
+&lt;p&gt;의존성 그래프에서 &lt;strong&gt;엔트리&lt;/strong&gt; 로 그래프의 시작점을 설정 -&amp;gt; 웹팩은 모든 자원을 &lt;strong&gt;모듈&lt;/strong&gt; 로 로딩한 후 아웃풋으로 묶어줌 -&amp;gt; &lt;strong&gt;로더&lt;/strong&gt; 로 각 모듈별로 바벨, 사스변환 등의 처리 -&amp;gt; 결과를 &lt;strong&gt;플러그인&lt;/strong&gt; 이 받아 난독화, 텍스트 추출 등의 추가 작업 수행&lt;/p&gt;
+
+&lt;h2 id=&quot;글-쓰며-참고한-문서&quot;&gt;[글 쓰며 참고한 문서]&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;[webpack 정의] https://jusungpark.tistory.com/52&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>myungeunlee</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="javascript" />
+      
+
+      
+        <summary type="html">웹팩(webpack) 이린? 웹팩은 프로젝트의 구조를 분석하고 자바스크립트 모듈을 비롯한 관련 리소스들을 찾은 다음 이를 브라우저에서 이용할 수 있는 번들로 묶고 패킹하는 모듈 번들러(Module bundler) 이다. 최근 자바스크립트를 브라우저가 이해할 수 있도록 변경해주는 역할.</summary>
+      
+
+      
+      
+    </feed>
+  
+  <entry></entry>
+      <title type="html">[React] Component LifeCycle</title>
+      <link href="https://myungeunlee.github.io/react-nomadcoders" rel="alternate" type="text/html" title="[React] Component LifeCycle" />
+      <published>2019-03-02T00:00:00+00:00</published>
+      <updated>2019-03-02T00:00:00+00:00</updated>
+      <id>https://myungeunlee.github.io/react-nomadcoders</id>
+      <content type="html">&lt;h4 id=&quot;component-lifecycle&quot;&gt;Component LifeCycle&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;첫 컴포넌트 render 시,
+    &lt;ol&gt;
+      &lt;li&gt;componentWillMount()&lt;/li&gt;
+      &lt;li&gt;render()&lt;/li&gt;
+      &lt;li&gt;componentDidMount()&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;state, props update 시,
+    &lt;ol&gt;
+      &lt;li&gt;componentWillReceiveProps()&lt;/li&gt;
+      &lt;li&gt;shouldComponentUpdate()&lt;/li&gt;
+      &lt;li&gt;componentWillUpdate()&lt;/li&gt;
+      &lt;li&gt;render()&lt;/li&gt;
+      &lt;li&gt;componentDidUpdate()&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;dump--smart-components&quot;&gt;Dump &amp;amp; Smart Components&lt;/h4&gt;
+&lt;dl&gt;
+  &lt;dt&gt;Dump component&lt;/dt&gt;
+  &lt;dd&gt;stateless functional component&lt;/dd&gt;
+  &lt;dd&gt;앞에 class가 아닌 &lt;strong&gt;functional&lt;/strong&gt; 로 선언한 컴포넌트&lt;/dd&gt;
+  &lt;dd&gt;state가 존재하지 않음&lt;/dd&gt;
+  &lt;dd&gt;render 존재 x, Component 의 function 들을 사용할 수 없음
+Smart component&lt;/dd&gt;
+  &lt;dd&gt;일반적인 state 와 props 가 존재하는 컴포넌트
+:앞에 class로 선언한 컴포넌트&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;c1&quot;&gt;//Smart Component&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Movie&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Component&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+			&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;~~~&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//Dump Component&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;functional&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Movie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;poster&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;={&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;poster&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;ajax-on-react&quot;&gt;AJAX on react&lt;/h4&gt;
+&lt;dl&gt;
+  &lt;dt&gt;: &lt;strong&gt;fetch(‘json데이터’)&lt;/strong&gt; 를 이용해서 json데이터를 가져오는 듯&lt;/dt&gt;
+  &lt;dd&gt;ajax 는 비동기 방식으로 데이터를 가져옴, 즉 새로고침없이 데이터를 가져옴&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;dl&gt;
+      &lt;dt&gt;Promises&lt;/dt&gt;
+      &lt;dd&gt;비동기&lt;/dd&gt;
+      &lt;dd&gt;첫번째라인이 끝나든 말든 두번째라인이 실행되는 거임.&lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;componentDidMount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;json url&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;respones&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;async await
+:async 를 사용하면 호출 순서에 따라 실행 되는 것이 아님.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nx&quot;&gt;componentDidMount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_getMovies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;_getMovies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//asynchronous function 임&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;movies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_callAPI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;// await모드는 _callAPI 함수가 return 까지 기다린다.(성공이건 실패건 상관 x)&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+		&lt;span class=&quot;na&quot;&gt;movies&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;movies&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;_callAPI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;json url&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;respones&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;movies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//return 하는 결과 값&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;review&quot;&gt;Review&lt;/h5&gt;
+&lt;p&gt;내기준 메모겸 정리해 두고 싶은 부분만 포스팅했다.
+노마드코더 강의는 전체적으로 웃기고 재밌다.
+영어로 진행되는데 자막도 재밌고 욕하는건 어쩜 너무 잘들리는지ㅋㅋ&lt;/p&gt;
+
+&lt;p&gt;자바스크립트 무료강의도 있길래 그것도 들어볼것이다.
+인스타그램 클론코딩 강의 듣고 싶은데 300달러라서 패스ㅎㅎ
+혹시 필요하신 분들은 &lt;a href=&quot;https://academy.nomadcoders.co/courses/category/KR&quot;&gt;노마드코더&lt;/a&gt; react나 javascript 강의 들으면 좋을 듯 하다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;dl&gt;
+      &lt;dt&gt;[글 쓰며 참고한 문서]&lt;/dt&gt;
+      &lt;dd&gt;&lt;a href=&quot;https://jusungpark.tistory.com/52&quot;&gt;react 강의&lt;/a&gt;&lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>myungeunlee</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="javascript" />
+      
+
+      
+        <summary type="html">Component LifeCycle 첫 컴포넌트 render 시, componentWillMount() render() componentDidMount()</summary>
+      
+
+      
+      
+    </feed>
+  
+  <entry></entry>
+      <title type="html">Array 실습 및 Object 객체</title>
+      <link href="https://myungeunlee.github.io/arry-object-destructuring" rel="alternate" type="text/html" title="Array 실습 및 Object 객체" />
+      <published>2019-02-25T00:00:00+00:00</published>
+      <updated>2019-02-25T00:00:00+00:00</updated>
+      <id>https://myungeunlee.github.io/arry-object-destructuring</id>
+      <content type="html">&lt;h2 id=&quot;실습-특정-문자열이-포함된-배열-만들어서-반환하기&quot;&gt;[실습] 특정 문자열이 포함된 배열 만들어서 반환하기&lt;/h2&gt;
+&lt;p&gt;문자열 ‘e’가 노드로 구성된 배열을 만들어서 반환&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelectorAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;listArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Array 변환&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;eArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;listArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;innerText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;apple&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;orange&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;banana&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;strawberry&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;객체-생성하기&quot;&gt;객체 생성하기&lt;/h2&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+function getObj(){
+  const name = &quot;crong&quot;;
+
+  const getName = function(){
+    return name;
+  }
+
+  const setName = function(newname){
+    name = newname;
+  }
+
+  const printName = function(){
+    console.log(name);
+  }
+
+  //방법 1.
+  return{
+    getName : getName,
+    setName : setName
+  }
+
+  //방법 2.
+  return{getName, setName}
+
+  var obj = getObj();
+  console.log(obj.getName());
+
+  //간단한 Object 생성
+  const data = {
+    let name,
+    getName(){
+
+    },
+    age
+  }
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;destructuring&quot;&gt;Destructuring&lt;/h1&gt;
+&lt;h2 id=&quot;destructuring-array&quot;&gt;Destructuring Array&lt;/h2&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+let data = [&quot;mong&quot;, &quot;lee&quot;, &quot;eun&quot;, &quot;myung&quot;];
+let [jisu,,jung] =data;
+console.log(jisu, jung);  //&quot;mong&quot; &quot;eun&quot;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;destructuring-object&quot;&gt;Destructuring Object&lt;/h2&gt;
+&lt;p&gt;let obj = {
+  name : “myungeun”,
+  address : “Korea”,
+  age : 20
+}&lt;/p&gt;
+
+&lt;p&gt;//할당한 변수명과 Object의 키값이 같은 경우
+let {name, age} = obj;
+console.log(name, age);         //”myungeun” 20&lt;/p&gt;
+
+&lt;p&gt;//할당한 변수명과 Object의 키값이 다른 경우&lt;br /&gt;
+let {name:myName, age:myAge} = obj;
+console.log(myName, myAge);     //”myungeun” 20&lt;/p&gt;
+
+&lt;h2 id=&quot;destructuring-json-파싱&quot;&gt;Destructuring JSON 파싱&lt;/h2&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+let news = [
+  {
+    &quot;title&quot; : &quot;LA&quot;,
+    &quot;imgurl&quot; : &quot;http://skfskdjflksdf&quot;
+    &quot;list&quot; : [
+        &quot;하이루&quot;,
+        &quot;이클립스&quot;,
+        &quot;비주얼스튜디오&quot;
+    ]
+  }
+  {
+    &quot;title&quot; : &quot;SC&quot;,
+    &quot;imgurl&quot; : &quot;http://skfskdjflksdf2312312&quot;
+    &quot;list&quot; : [
+        &quot;하이루123&quot;,
+        &quot;이클립스123&quot;,
+        &quot;비주얼스튜디오123&quot;
+    ]
+  }
+];
+
+// 방법 1.
+let [,SC] = news;
+let {title, imgurl} = SC;
+console.log(title, imgurl);    // &quot;SC&quot; &quot;http://skfskdjflksdf2312312&quot;
+
+//방법 2.
+let [, {title, imgurl}] = news;
+console.log(title, imgurl);    // &quot;SC&quot; &quot;http://skfskdjflksdf2312312&quot;
+
+//방법 3. function 이용
+function getList([,{list}]){  //객체로 구성된 리스트를 받아 마지막 리스트 객체의 &quot;list&quot; value 값
+  console.log(list);  
+}
+
+getNewsList(news);    //[&quot;하이루123&quot;,&quot;이클립스123&quot;,&quot;비주얼스튜디오123&quot;]
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1 id=&quot;글-쓰며-참고한-문서&quot;&gt;[글 쓰며 참고한 문서]&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hyunseob.github.io/2016/08/30/javascript-closure/&quot;&gt;클로저&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.inflearn.com/course/es6-강좌-자바스크립트/&quot;&gt;ES6&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>myungeunlee</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="javascript" />
+      
+
+      
+        <summary type="html">[실습] 특정 문자열이 포함된 배열 만들어서 반환하기 문자열 ‘e’가 노드로 구성된 배열을 만들어서 반환 ```html apple orange banana strawberry</summary>
+      
+
+      
+      
+    </feed>
+  
+  <entry></entry>
+      <title type="html">let과 const</title>
+      <link href="https://myungeunlee.github.io/let-closure-const" rel="alternate" type="text/html" title="let과 const" />
+      <published>2019-02-23T00:00:00+00:00</published>
+      <updated>2019-02-23T00:00:00+00:00</updated>
+      <id>https://myungeunlee.github.io/let-closure-const</id>
+      <content type="html">&lt;h2 id=&quot;let과-var의-차이&quot;&gt;let과 var의 차이&lt;/h2&gt;
+&lt;p&gt;-var로 선언한 변수는 지역우선으로 참조했다가 없으면, 전역에서도 사용할 수 있다.
+-let로 선언한 변수는 지역에서만 사용할 수 있다.&lt;/p&gt;
+
+&lt;h2 id=&quot;closure클로저-란&quot;&gt;closure(클로저) 란?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;함수 밖에서 선언된 변수를 함수 내부에서 사용할 때 클로저 발생.&lt;/li&gt;
+  &lt;li&gt;정의한 함수(outFunc)는 함수(inFunc)를 반환하고, 사용은 바깥에서 함.&lt;/li&gt;
+  &lt;li&gt;즉, 함수에서 정의한 환경을 기억하고 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;let과-closure&quot;&gt;let과 closure&lt;/h2&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelectorAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;번째 리스트 입니다&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;javascript&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;java&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;c/c++&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;node.js&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;여기서 i 값이 클로저이다.
+따라서 i 값은 참조되면서 공유고 있음.&lt;/p&gt;
+
+&lt;h3 id=&quot;해결책&quot;&gt;[해결책]&lt;/h3&gt;
+&lt;p&gt;var -&amp;gt; let 으로 변경.&lt;/p&gt;
+
+&lt;h2 id=&quot;const-변수&quot;&gt;const 변수&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;선언된 변수 고정됨. 변경 불가능&lt;/li&gt;
+  &lt;li&gt;배열과 object의 값을 변경은 가능함.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;immutable변경이-불가능-한&quot;&gt;immutable(변경이 불가능 한)&lt;/h3&gt;
+&lt;h4 id=&quot;참고-객체와-문자열&quot;&gt;(참고) 객체와 문자열&lt;/h4&gt;
+&lt;p&gt;문자열인 경우 변경이 불가능하다. 즉, 별도의 메모리를 사용하고 있다.(값의 의한 복사)
+반대로 객체는 mutable 함. 즉, 같은 메모리를 참조하고 있음.&lt;/p&gt;
+&lt;h4 id=&quot;immutable-array-만들기&quot;&gt;immutable array 만들기&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;(이유) 뒤로가기, 앞으로가기를 할 때 객체는 현재 저장한 값이 계속 업데이트되고 있기 때문에 이전의 값이 무엇인지 기억하지 못하고 있음.
+```html&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;const list = [“apple”, “orange”, “watermelon”];
+list2 = [].concat(list, “banana”);
+console.log(list, list2); //[“apple”, “orange”, “watermelon”], [“apple”, “orange”, “watermelon”, “banana”]&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+## String 새로운 메서드
+- startsWith : 시작문자 매치 여부
+- endsWith : 끝문자 매치 여부
+- includes : 문자 포함 여부
+```html
+
+let str = &quot;hello LA ~ ^^&amp;amp;&quot;;
+let matchstr = &quot;hello&quot;;
+console.log(str.startsWith(matchstr)); //true
+console.log(str.endsWith(matchstr)); //false;
+console.log(str.includes(matchstr)); // true;
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;for-of&quot;&gt;for of&lt;/h2&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+var data = [1,2,undefined, NaN, null, &quot;&quot;];
+
+//방법1
+data.forEach(function(value){
+  console.log(&quot;valueis&quot;, value);
+})
+
+//방법2 : for in 문제점 : 해당 객체뿐만아니라 상위객체(proptotype에 추가된 3)까지 나타냄.
+Array.prototype.getIndex = function(){};
+for(let idx in data){
+  console.log(data[idx]); //... function(){}
+}
+
+//방법3 : for of : for in의 문제점 해결
+for(let idx of data){
+  console.log(data[idx]);
+}
+//문자열 순회 기능
+var str = &quot;hello world!!!&quot;
+for(let val of str){
+  console.log(val); //&quot;h&quot; &quot;e&quot; &quot;l&quot; &quot;l&quot; &quot;o&quot; &quot; &quot; ...
+}
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;spread-operator&quot;&gt;spread operator&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;값을 펼쳐준다.(예시를 보면 pre 배열객체가 배열로 전체복사되는 게 아님. 값만 복사해서 펼쳐준다고 보면 됨. 따라서 []배열안에 spread operator와 객체를 넣어줌)&lt;/li&gt;
+  &lt;li&gt;참조 값은 다름, 서로 다른 데이터
+```HTML&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;let pre = [“apple”, “oragne”, 100];
+let newData = […pre];
+console.log(pre, newData); // [“apple”, “oragne”, 100  [“apple”, “oragne”, 100]
+console.log(pre == newData); // false&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+배열에 특정 배열을 끼워 넣는 기능.
+```HTML
+
+let pre = [100, 200, &quot;hello&quot;, null];
+let newData = [0,1,2,3, ...pre, 4];
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;배열 값을 함수의 매개변수에 할당.&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+function sum(a,b,c){
+  return a+b+c;
+}
+let pre2 = [100, 200, 300];
+
+sum.apply(null, pre2); //600
+sum(...pre2);
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;from-매소드로-배열-만들기&quot;&gt;from 매소드로 배열 만들기&lt;/h2&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+function addMark(){
+
+  //방법 1
+  //arguments 내부 지역변수를 이용해서 인자값을 가져옴.
+  //가변적인 파라미터가 들어오는 경우 사용됨.
+  let newData = [];
+  for(let i=0; i&lt;span class=&quot;nt&quot;&gt;&amp;lt;arguments.length&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;++){&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;newData.push&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;]+&quot;!&quot;);&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;console.log&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newData&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;);&lt;/span&gt;
+
+
+  &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;방법&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;2&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;newArray = &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Array.from(arguments);&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;newData2 = &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;arguments.map(function(value){&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&quot;!&quot;;&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;});&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;console.log&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newData&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;addMark&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(1,2,3,4,5,6,7);&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;글-쓰며-참고한-문서&quot;&gt;[글 쓰며 참고한 문서]&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hyunseob.github.io/2016/08/30/javascript-closure/&quot;&gt;클로저&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.inflearn.com/course/es6-강좌-자바스크립트/&quot;&gt;ES6&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>myungeunlee</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="javascript" />
+      
+
+      
+        <summary type="html">let과 var의 차이 -var로 선언한 변수는 지역우선으로 참조했다가 없으면, 전역에서도 사용할 수 있다. -let로 선언한 변수는 지역에서만 사용할 수 있다.</summary>
+      
+
+      
+      
+    </feed>
+  
+</feed>
